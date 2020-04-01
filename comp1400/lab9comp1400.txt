@@ -1,0 +1,64 @@
+#include<stdio.h>
+int main(void)
+{
+    int x = 1;
+    float y = 2;
+    int z = 3;
+    // complete this line
+    printf(" x = %d, y = %.0f, z = %d \n", x, y, z);
+
+    // complete this line
+    // complete this line
+    x = 10;
+    y = 15.00000;
+    z = 4;
+    printf(" x = %d, y = %f, z = %d \n", x, y, z);
+
+    // complete this line
+    x = 10;
+    y = 15.00000;
+    z = 50;
+    printf(" x = %d, y = %f, z = %d \n", x, y, z);
+
+} 
+
+
+B) NONE
+
+
+C) The output of the code is in the following sequence:
+5
+20
+5
+3
+22
+
+
+
+
+D) 
+#include<stdio.h>
+void lab_9(int a);
+
+
+int main()
+{
+    int x = 2;
+	printf("the value of x is:%d\n", x);
+	lab_9(x);
+}
+
+
+void lab_9(int a)
+{
+    int x = 2;
+	x=x*++a;
+	printf("the value of x is:%d", x);
+} 
+
+
+
+
+
+
+E) The goal of this program is to print a number in reverse.

@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+int cipherKey;
+int size;
+int update;
+
+int Cipher(){
+    printf("Please enter the size of the string: ");
+    scanf("%d", &size);
+    char string[size];
+    char string2[size];
+    printf("\nPlease enter all the characters of the string:\n");
+    for(int i = 0; i < size; i++){
+        scanf("%s", &string[i]);
+    }
+    char Alphabets[52] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+    
+    printf("\nPlease enter the the cipher key: ");
+    scanf("%d", &cipherKey);
+    
+    for(int j = 0; j < size; j++){
+        for(int k = 0; k < 26; k++){
+            if(Alphabets[k] == string[j]){
+	    
+                string2[j] = Alphabets[k + cipherKey];
+		break;
+            }
+        }
+    }
+    
+    printf("\n\n\n");
+    printf("%s", string2);
+}
+
+int main(){
+    Cipher();
+}

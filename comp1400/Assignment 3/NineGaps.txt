@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int row, column;
+int map;
+
+int main(){
+    printf("Please enter a row number: ");
+    scanf("%d", &row);
+    printf("Please enter a column number: ");
+    scanf("%d", &column);
+    
+    if((row > 3) || (column > 2)){
+        return 0;
+    }
+    
+    map = (row * 3) + column;
+    
+    printf("The map is, %d", map);
+    
+}

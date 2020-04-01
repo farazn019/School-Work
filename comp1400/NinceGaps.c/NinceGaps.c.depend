@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1574295917 source:c:\users\owner\desktop\comp1400\nincegaps.c\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

@@ -1,0 +1,17 @@
+Q1) What is the binary number system? What symbols does it use? What is the value of the places in the binary number system?
+A1) The binary number system is a base two number system, and it is based off of two symbols. The symbols that the binary system use are:
+0 and 1. The value of the places in the binary number system are expressed as a power of 2.
+
+Q2) What is the decimal number system?  What symbols does it use?  What is the value of the places in the decimal number system?
+A2) The decimal number system is a base 10 number system, and it is based off of ten symbols. The symbols that the decimal number system use are:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9. The value of the places in the decimal number system are expressed as a power of ten.
+
+Q3) What is the hexadecimal number system?  What symbols does it use?  What is the value of the places in the hexadecimal number system?
+A3) The Hexadecimal number system is a base 16 number system, so it is based off of 16 distinct symbols. The symbols that the hexadecimal
+number system use are: the numbers 0 through 9, and the letters A through F. The value of the places in the hexadecimal number system are
+expressed as a power of 16.  
+
+
+Q4) How many symbols do you think would be used in a base 7 number system? What would they be?
+A4) The number of symbols that would be used in a base 7 number system are 7 distinct symbols. 
+These symbols would be: 0, 1, 2, 3, 4, 5, 6.

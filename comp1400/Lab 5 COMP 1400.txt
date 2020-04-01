@@ -1,0 +1,135 @@
+#include <stdio.h>
+#include <stdio.h>
+#include <math.h>
+#include <stdbool.h>
+
+int sumOfNumbers(){
+    int userNumbers[10];
+    int sum = 0;
+    int number;
+    for(int i = 0; i < 10; i++){
+        number = scanf("%d", &userNumbers[i]);
+        sum = sum + userNumbers[i];
+    }
+    
+    printf("The sum of the numbers is, %d.\n", sum);
+}
+
+int primeNumber(){
+    int userNumber;
+    
+    printf("Please enter a number to determine if it's prime or not: ");
+    scanf("%d", &userNumber);
+    
+    int squareRootNumber = sqrt(userNumber);
+    bool isSquareRoot = false;
+    
+    for(int i = 1; i <= squareRootNumber; i++){
+        if((userNumber > 1) && (userNumber % i == 0) && (i != 1)){
+            isSquareRoot = false;
+            break;
+        }
+        else{
+            isSquareRoot = true;
+        }
+    }
+    
+    if(isSquareRoot == true){
+        printf("The number %d is a prime number.\n", userNumber);
+    }
+    else{
+        printf("The number %d is not a prime number.\n", userNumber);
+    }
+}
+
+
+/*
+int triangle(int numberOfRows){
+    printf("How mant rows do you want displayed: ");
+    scanf("%d", &numberOfRows);
+    int counter = 1;
+    if(counter == numberOfRows){
+        return diagram;
+    }
+    else{
+        printf()
+    }
+}
+
+*/
+
+int multiplicationTable(){
+    int userNumber;
+    int product;
+    printf("Please enter the number that you want the multiplication table for: ");
+    scanf("%d", &userNumber);
+    for(int i = 1; i <= 10; i++){
+        product = userNumber * i;
+        printf("%d x %d = %d\n", userNumber, i, product);
+    }
+}
+
+
+int dayTable(){
+    int userNumber;
+    
+    printf("Please enter the number that you want the day for: ");
+    scanf("%d", &userNumber);
+    
+    switch(userNumber){
+        case 1:
+            printf("This day is Monday.\n");
+            break;
+            
+        case 2:
+            printf("This day is Tuesday.\n");
+            break;
+        
+        case 3:
+            printf("This day is Wednesday.\n");
+            break;
+            
+        case 4:
+            printf("This day is Thursday.\n");
+            break;
+        
+        case 5:
+            printf("This day is Friday.\n");
+            break;
+        
+        case 6:
+            printf("This day is Saturday.\n");
+            break;
+            
+        case 7:
+            printf("This day is Sunday.\n");
+            break;
+            
+        default:
+            printf("Please enter a vaild number from 1 to 7 please.\n");
+            break;
+    }
+}
+    
+
+
+/*
+Exercise 6:
+
+Part A) Case 2 is not selected because, the while loop does not go up to the 
+number 'two' (2). This is indicative of the fact that, the expression is read
+as, 'while(i < 2)'. This statement is true as long as i is less than two.
+The while loop will execute only once in Program A.
+
+Part B) Case 2 is not selected because, the while loop does not go up to the 
+number 'two' (2). This is indicative of the fact that, the expression is read
+as, 'while(i < 2)'. This statement is true as long as i is less than two.
+The while loop will execute twice in Program B.
+*/
+
+int main(){
+    sumOfNumbers();
+    primeNumber();
+    multiplicationTable();
+    dayTable();
+}

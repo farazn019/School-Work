@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int numOne, numTwo, binaryOperation;
+int main(){
+    numOne = rand()%9 + 1;
+    numTwo = rand()%9 + 1;
+    
+    binaryOperation = rand()%2 + 1;
+    
+    switch(binaryOperation){
+        case 0:
+            numOne + numTwo;
+            break;
+        case 1:
+            numOne - numTwo;
+            break;
+        case 2:
+            numOne - numTwo;
+            break;
+    }
+}

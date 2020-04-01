@@ -1,0 +1,90 @@
+#include <stdio.h> // C Standard Library for input/output functions
+#include <stdlib.h> // C Standard Library for some utility functions,
+// such as rand()
+#include <stdbool.h>
+#include <time.h> // C Standard Library for date and time functions
+// Here you will later on (in the next assignments) declare some variables
+// to use them inside the program
+int main(void) {
+
+    // Start the outer loop to ask the level of difficulty from the
+    // player. This loop gives the player the opportunity to play again
+    // after the game is over. Complete this part:
+    int play;
+    int timer;
+    int difficulty;
+    int empty_squares;
+    play = 1;
+    int userResults;
+    while (play){
+        printf("Please select the level of difficulty for this game:\n\n");
+        printf("1 is for easy.\n");
+        printf("2 is for medium.\n");
+        printf("3 is for hard.\n");
+        scanf("%d", &difficulty);
+       
+        switch(difficulty){
+            case 1:
+                empty_squares = 3;
+                break;
+           
+            case 2:
+                empty_squares = 5;
+                break;
+           
+            case 3:
+                empty_squares = 7;
+                break;
+        }
+        
+        
+        
+        int correctNumber = 1;
+        while(correctNumber){
+            int userInteger;
+            printf("\n\nPlease enter a number between 1 and 9: ");
+            scanf("%d", &userInteger);
+               
+            if(userInteger == 0){
+                break;
+            }
+            else if((userInteger > 9) || (userInteger < 1)){
+                printf("\n\n You have entered a number outside of the bounded range. Please enter a valid number.");
+            }
+            else{
+                correctNumber = !correctNumber;
+            }
+        }
+               
+               
+        int row, column;
+        int matrixInputCounter = 1;
+        while(matrixInputCounter) {
+            //matrixInputCounter ++;
+            printf("\n\nPlease enter a row and column number for the number to be put in:\n\n");
+            printf("Enter the row first and the column second.\nThere are 3 rows and 3 column for user input.");
+            scanf("%d", &row);
+            scanf("%d", &column);
+            printf("\nRow: %d", row);
+            printf("\nColumn: %d", column);
+                   
+            if((row > 3) || (row < 1) || (column > 3) || (column < 1)){
+                printf("Please enter a valid row and column number for the number to be put in.\n\n"); 
+                
+            }
+            else{
+                matrixInputCounter = !matrixInputCounter;
+            }
+                   
+        }
+        if(userResults == 1){
+            printf("\n\nYou have won the game.\n\n");
+        }
+        else{
+            printf("\n\nUnfortunately, you have lost the game, because the timer ran out, or you input the incorrect numbers.\n\n");
+        }
+        printf("\n\n\nWould you like to play again (1 for 'yes' -- 0 for 'no' ): ");
+        scanf("%d", &play);
+           
+    }
+    

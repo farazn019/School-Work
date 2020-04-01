@@ -1,0 +1,50 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    /*Part A*/
+    //a: The code will print out: 1, 3, 9, 27, 81.
+    //b: The code will print out: 11---, 12---, 13---, 14---, 15, 16---, 17---, 18---, 19---, 20
+    //c: The code will print out: 4-7, 5-6 . 
+    //d: The code will print out: 20 . 
+    //e: The code will print out: 5, 4, 3, 2, 1, 0
+    /*f: The code will print out the following: Sum of 1 to 5 is 5 
+    */
+    
+    
+    /* Part B:
+    */
+    
+    int userInput;
+    int tries = 0;
+    int correctNumber = rand() % 50 + 1;
+    while(tries < 10){
+        printf("Please enter a number between 1 and 50:");
+        scanf("%d", &userInput);
+        tries = tries + 1;
+        if(userInput > correctNumber){
+            printf("\n\n\nThe number that you entered: %d is too high. Guess Lower.\n\n\n", userInput);
+        }
+        else if(userInput < correctNumber){
+            printf("The number that you entered: %d is too low. Guess Higher.\n\n\n", userInput);
+        }
+        else{
+            printf("Good job you entered the correct number.\n\n\n");
+            break;
+        }
+    }
+    
+    if(tries >= 10){
+        printf("Sorry, the correct number was, %d", correctNumber);
+    }
+    
+    return 0;
+}
