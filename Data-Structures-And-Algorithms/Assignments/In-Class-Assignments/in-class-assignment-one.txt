@@ -1,0 +1,41 @@
+Q1. Explain in your own words, what are the advantages and disadvantages of Arrays?
+A1. There are many advantages and disadvantages of using arrays. 
+Some of the advantages are: In many high-level languages such as C++, C, Java, or Python it is very easy to use arrays, and due to the fact that arrays are allocated contiguously in memory, their time-complexity is O(1). 
+Some of the disadvantages of arrays are: Due to the fact that arrays are stored in contiguous memory blocks, and their size is predefined, inserting or removing elements is generally very expensive. 
+In addition, having mentioned above that the size of arrays are predefined, if we want to add new element(s), then we have to create another array with a bigger size, and move all the elements over, which is expensive in terms of space-time complexity.
+
+Q2. What is the run-time complexity (Big-O) value for the following operation in Arrays? a. Traversing b. Adding an item (what different cases can we have? Will they differ in terms of time complexity)? c. Deleting an item at a given position. d. Deleting a given value from the Array. e. Searching an array value
+
+a. O(N) – with N being the number of elements / size of the array.
+
+b. There are 2 different cases:
+1. There are/is open blocks in memory for insertion : O(1)
+2. There is no more memory for inserting elements: O(N)
+
+c. O(N)
+
+d. O(N)
+
+e.O(N)
+
+
+Q3. What is the worst-case and best-case complexity for finding an item in an unsorted array?
+The worst-case time complexity for finding an item in an unsorted array would be, O(N). The reason being, the worst-case would be when the item is at the very end of the array. So, if the array that you are traversing has N elements, then it would take O(N) time.
+The best-cast time complexity for  finding an element in an array is, O(1). The reason being, the best-case is when the element that you are looking for in an unsorted array is at the very beginning, and if that is indeed the case, then you have found the element in constant time or more formally O(1) time complexity.
+
+Q4. In your own words, explain the advantages of Linked list over Arrays?
+The advantages of using Linked Lists over arrays are:
+- Better space management, because the Nodes in a linked list are not stored at contiguous memory blocks, so the size of a Linked List does not have to be predefined (In other words, you don’t have to tell the compiler how many Nodes your linked list has).
+
+
+
+
+
+Q5. What is the run time complexity (Big-O) value for the following operation in Linked List? a. Traversing b. Adding an item (state time complexity for all three cases)
+
+a. The time-complexity for traversing a Linked-List is O(N) – with N being the number of Nodes in the Linked List.
+
+b. There are three cases:
+1. Adding a Node at the beginning – O(1)
+2. Adding a Node in the middle – O(N), (Technically it is (N+1)/2 , but we drop constants and other operators when using Big-Oh notation)
+3. Adding a Node in the end -- O(N)
