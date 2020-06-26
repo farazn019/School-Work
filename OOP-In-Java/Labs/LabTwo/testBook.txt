@@ -1,0 +1,64 @@
+Script started on 2020-06-03 16:16:55-0400
+]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabTwo[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabTwo[00m$ cat book.java
+class book{
+    private String nameBook;
+    private String nameAuthor;
+    private int yearOfPublication;
+    private int numberOfPages;
+
+    book(String name){
+        this.nameBook = name;
+    }
+
+    String getNameBook(){
+        return this.nameBook;
+    }
+
+    void setNameAuthor(String author){
+        this.nameAuthor = author;
+    }
+
+    void setYearOfPublication(int year){
+        this.yearOfPublication = year;
+    }
+
+    void setNumberOfPages(int number){
+        this.numberOfPages = number;
+    }
+
+
+    String getNameAuthor(){
+        return(this.nameAuthor);
+    }
+
+    int getYearOfPublication(){
+        return (this.yearOfPublication);
+    }
+
+    int getNumberOfPages(){
+        return (this.numberOfPages);
+    }
+}]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabTwo[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabTwo[00m$ clear[K[K[K[K[Kcat testBookClass.java
+class testBookClass{
+    public static void main(String[] args){
+        book newBook = new book("C++ is better than Java");
+        System.out.println(newBook.getNameBook());
+
+        newBook.setNameAuthor("Faraz Naseem");
+        newBook.setYearOfPublication(2020);
+        newBook.setNumberOfPages(365);
+
+        System.out.println("The name of the author is, " + newBook.getNameAuthor() + '.');
+        System.out.println("The year that " + newBook.getNameBook() + " was published is, " + newBook.getYearOfPublication() + '.');
+        System.out.println(newBook.getNameBook() + " has, " + newBook.getNumberOfPages() + " pages.");
+    }
+}]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabTwo[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabTwo[00m$ javac testBookClass.java
+]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabTwo[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabTwo[00m$ java testBookClass
+C++ is better than Java
+The name of the author is, Faraz Naseem.
+The year that C++ is better than Java was published is, 2020.
+C++ is better than Java has, 365 pages.
+]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabTwo[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabTwo[00m$ exit
+exit
+
+Script done on 2020-06-03 16:17:32-0400

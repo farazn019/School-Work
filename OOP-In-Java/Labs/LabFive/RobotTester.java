@@ -1,0 +1,42 @@
+import java.awt.Point;
+/**
+ A class to test the Robot class.
+ */
+public class RobotTester
+{
+    /**
+     Tests the methods of the Robot class.
+     @param args not used
+     */
+    public static void main(String[] args)
+    {
+// Create a new Robot object with the initial position of (5,5) and
+// initial direction to the East (1).
+        Robot robot = new Robot(new Point(5, 5), 1);
+        robot.printLocation();
+        robot.Move(); // 6, 5, 1
+        robot.printLocation();
+        robot.turnRight(); // 6, 5, 2
+        robot.printLocation();
+        robot.Move(); // 6, 6, 2
+        robot.printLocation();
+        robot.Move(); // 6, 7, 2
+        robot.printLocation();
+        robot.turnRight(); // 6, 7, 3
+        robot.printLocation();
+        robot.Move(); // 5, 7, 3
+        robot.printLocation();
+        robot.Move(); // 4, 7, 3
+        robot.printLocation();
+        robot.turnLeft(); // 4, 7, 2
+        robot.printLocation();
+        robot.Move(); // 4, 8, 2
+        robot.printLocation();
+        Point location = robot.getLocation();
+
+        System.out.println("Location: " + location.x + ", " + location.y);
+        System.out.println("Expected: 4, 8");
+        System.out.println("Direction: " + robot.getDirection());
+        System.out.println("Expected: S");
+    }
+}

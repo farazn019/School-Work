@@ -1,0 +1,49 @@
+Script started on 2020-06-03 15:53:48-0400
+]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabTwo[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabTwo[00m$ clear
+[3J[H[2J]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabTwo[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabTwo[00m$ cat activityOne.java
+public class activityOne{
+    static String str = "faraz naseem";
+    static String firstName = str.substring(0, 5);
+    static String lastName = str.substring(6, 12);
+    static String str2 = lastName + ", " + firstName;
+    static char lastLetterLastName = lastName.charAt(lastName.length() - 1);
+    static char firstLetterLastName = lastName.charAt(lastName.length() - 1);
+
+    static String firstLetterUpperCase = firstName.substring(0, 1);
+    static String firstLetterUpperCaseLName = lastName.substring(0, 1);
+
+    static String newFirstName = firstLetterUpperCase.toUpperCase() + firstName.substring(1, 5);
+    static String newLastName = firstLetterUpperCaseLName.toUpperCase() + lastName.substring(1, 6);
+
+
+    public static void main(String[] args){
+        System.out.println(str);
+        System.out.println("The length of the string is, " + str.length() + '.');
+        System.out.println("My first name is, " + firstName + '.');
+        System.out.println("My last name is, " + lastName + '.');
+        System.out.println("The variable \"str2\" is, " + str2 + '.');
+
+        System.out.println("The last occurence of the last letter, " + lastLetterLastName + " in my first name is, " + firstName.indexOf(lastLetterLastName) + '.');
+        System.out.println("The first occurence of the first letter, " + firstLetterLastName + " in my first name is, " + firstName.indexOf(firstLetterLastName) + '.');
+
+        System.out.println("The uppercase of the first letter in my first name is, " + firstLetterUpperCase.toUpperCase() + '.');
+        System.out.println("The uppercase of the first letter in my last name is, " + firstLetterUpperCaseLName.toUpperCase() + '.');
+
+        System.out.println("Now, my new name is, " + newFirstName + " " + newLastName + '.');
+
+    }
+}]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabTwo[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabTwo[00m$ java activityOne
+faraz naseem
+The length of the string is, 12.
+My first name is, faraz.
+My last name is, naseem.
+The variable "str2" is, naseem, faraz.
+The last occurence of the last letter, m in my first name is, -1.
+The first occurence of the first letter, m in my first name is, -1.
+The uppercase of the first letter in my first name is, F.
+The uppercase of the first letter in my last name is, N.
+Now, my new name is, Faraz Naseem.
+]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabTwo[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabTwo[00m$ exit
+exit
+
+Script done on 2020-06-03 15:55:34-0400

@@ -34,5 +34,6 @@ class problem1{
         p = 5;
         a = 4;
         System.out.println("The value of 'G' is, " + gravityEquation(m1, m2, p, a) + '.');
+
     }
 }

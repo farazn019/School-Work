@@ -1,0 +1,46 @@
+Script started on 2020-06-12 19:35:44-0400
+]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabThree[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabThree[00m$ cat[K[K[Kclear
+[3J[H[2J]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabThree[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabThree[00m$ CarTester.java[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcar C[K[K[K[Ky[Kat CarTester.java
+public class CarTester{
+    public static void main(String[] args){
+        Car myCar = new Car("Honda", "Civic", 2009, 2000, 10, 30.0);
+
+
+        myCar.turnOn(); //The car will turn on.
+        myCar.getMake(); //The brand of the car will be displayed.
+        myCar.getModel(); //The model of the car will be displayed.
+        myCar.getFuelEfficiency(); //The fuel efficiency of the car will appear on the console.
+        myCar.accelerate(); //The car accelerates
+        myCar.getGasInTank(); //Gets the amount of gas in the car tank.
+        myCar.drive(25); //Drives the car 25 km.
+        myCar.stop(); //Stops the car.
+        myCar.drive(10); //Drives the car another 10km (but it won't happen, because there isn't enough gas);
+        myCar.getGasInTank(); //Gets the gas in the tank (0.0L)
+        myCar.addGas(45.0); //A certain amount of gas will be entered into the car.
+        myCar.accelerate(); //The car will accelerate.
+        myCar.getGasInTank(); //The amount of gas in the car will be displayed to the user.
+        myCar.turnOff(); //The car will turn off.
+    }
+}]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabThree[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabThree[00m$ javac CarTester.java
+]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabThree[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabThree[00m$ java CarTester
+Car is now on!
+The brand of the car is, Honda.
+The model of the car is, Civic.
+The fuel efficiency is, 10 L/km.
+Now, we are accelerating! 
+The amount of gas in the gas tank in litres is, 29.80.
+Great, we have fuel in the car.
+Great! We have enough fuel to drive, 25.0 kilometers.
+Now driving 25.0 kilometers
+Now, stopping the car! 
+Sorry, there is no more gas in the tank anymore. The amount of gas left is literally, 0.0 litres.
+The amount of gas in the gas tank in litres is, 0.00.
+Now adding, 45.0 litres of fuel in the car.
+The car now has, 45.0 litres of fuel.
+Now, we are accelerating! 
+The amount of gas in the gas tank in litres is, 44.80.
+The car is now off!
+]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabThree[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabThree[00m$ exit
+exit
+
+Script done on 2020-06-12 19:36:16-0400

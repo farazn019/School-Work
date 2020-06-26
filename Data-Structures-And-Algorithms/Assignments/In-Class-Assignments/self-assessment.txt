@@ -1,0 +1,5 @@
+Self-Assessment
+
+Q1. The base case will be returned 3 times.
+
+Q2. The result of mystery(648) is, 9.
