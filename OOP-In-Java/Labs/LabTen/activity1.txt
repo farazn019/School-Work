@@ -1,0 +1,13 @@
+Script started on 2020-08-07 14:22:20-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabTen[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabTen[00m$ a[Kcat ArrayListActivity.java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ArrayListActivity{
+    public static void reverse(ArrayList<Object>list){
+        Collections.reverse(list);
+    }
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabTen[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabTen[00m$ exit
+exit
+
+Script done on 2020-08-07 14:22:34-04:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,198 @@
+Script started on 2020-07-24 14:39:28-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[00m$ ca [Kt 2[KEdibl3[Ke.java
+
+interface Edible{
+    public String howToEat();
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[00m$ car[Kt Animal.java
+
+abstract class Animal implements Edible{
+
+    private boolean isEdible;
+    void setIsEdible(boolean isEdible){this.isEdible = isEdible;}
+    boolean getIsEdible(){ return(this.isEdible);}
+
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[00m$ cat Chicken.java
+
+class Chicken extends Animal implements Edible{
+    private static String animalName = "Chicken";
+    Chicken(boolean isEdible){ this.setIsEdible(isEdible);}
+
+    public String howToEat() {
+        if (this.getIsEdible() == true) {
+            return (this.getAnimalName() + ": Fry it and enjoy eating it with ketchup, fries and Coke!");
+        }
+        else{
+            return(this.getAnimalName() + ": Can not be cooked! Sorry.");
+        }
+    }
+
+    String getAnimalName(){ return(animalName);}
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[00m$ cat Fish.java
+
+
+class Fish extends Animal implements Edible{
+    private static String animalName = "Fish";
+    Fish(boolean isEdible){ this.setIsEdible(isEdible); }
+
+    public String howToEat(){
+        if(this.getIsEdible() == true){
+            return(this.getAnimalName() + ": Cut it up, season it, bake it in the oven, and eat it with ketchup and some beer!");
+        }
+        else{
+            return(this.getAnimalName() + ": Can not be eaten!");
+        }
+    }
+
+    public static String getAnimalName() {
+        return (animalName);
+    }
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[00m$ cat Tiger.java
+
+
+class Tiger extends Animal implements Edible{
+    private static String animalName = "Tiger";
+    Tiger(boolean isEdible){ this.setIsEdible(isEdible);}
+
+
+    public String howToEat(){
+        if(this.getIsEdible() == true){
+            return(this.getAnimalName() + ": Bake it's meat in the oven, and enjoy it with mustard and water!");
+        }
+        else{
+            return(this.getAnimalName() + ": Can not be eaten!");
+        }
+    }
+
+    String getAnimalName(){ return(animalName);}
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[00m$ cathe[K[K[Kt hello.txt
+Hello World!
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[00m$ car [K[Kt output[K[KutString.txt
+Bye
+Hello!
+Hey!
+Welcome
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[00m$ car[Kt outputInt.txt
+-36
+-5
+0
+12
+12
+83
+239
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[00m$ cat outputDouble.txt
+-94.0
+-12.4
+2.9
+3.0
+22.0
+92.45
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[00m$ cat wrote[K[K[K[K[Kmain.java
+import java.io.File;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.nio.file.*;
+import java.io.FileReader;
+import java.util.Collections;
+
+class main {
+    public static void main(String[] args) {
+
+        Chicken chicken = new Chicken(true);
+        System.out.println(chicken.howToEat());
+
+        Fish fish = new Fish(true);
+        System.out.println(fish.howToEat());
+
+        Tiger tiger = new Tiger(true);
+        System.out.println(tiger.howToEat());
+
+        try {
+            PrintWriter printer = new PrintWriter("hello.txt", "UTF-8");
+            printer.println("Hello World!");
+            printer.close();
+        }
+        catch (IOException io_exception){
+            System.out.println("Sorry, couldn't find the file!");
+        }
+
+
+        int lineNumber = 1;
+        BufferedReader br;
+        Scanner in;
+
+        try {
+
+            {
+                br = new BufferedReader(new FileReader("Input1.txt"));
+                in = new Scanner(new File("Input1.txt"));
+                String input = in.nextLine();
+                if (input.equals("String")) {
+                    ArrayList<String> outputStringFile = new ArrayList<String>();
+                    while (((br.readLine()) != null) && (lineNumber <= 4)) {
+                        outputStringFile.add(Files.readAllLines(Paths.get("Input1.txt")).get(lineNumber));
+                        lineNumber += 1;
+                    }
+                    Collections.sort(outputStringFile);
+                    PrintWriter stringPrinter = new PrintWriter("outputString.txt", "UTF-8");
+                    for(int i = 0; i < outputStringFile.size(); i++){
+                        stringPrinter.println(outputStringFile.get(i));
+                    }
+                    stringPrinter.close();
+                }
+
+
+            }
+
+            {
+                br = new BufferedReader(new FileReader("Input2.txt"));
+                in = new Scanner(new File("Input2.txt"));
+                String input = in.nextLine();
+                if(input.equals("Integer")){
+                    lineNumber = 1;
+                    ArrayList<Integer> outputIntegerFile = new ArrayList<Integer>();
+
+                    while(in.hasNextInt()){
+                        outputIntegerFile.add(in.nextInt());
+                    }
+                    Collections.sort(outputIntegerFile);
+                    PrintWriter intPrinter = new PrintWriter("outputInt.txt", "UTF-8");
+                    for(int i = 0; i < outputIntegerFile.size(); i++){
+                        intPrinter.println(outputIntegerFile.get(i));
+                    }
+                    intPrinter.close();
+                }
+            }
+
+            {
+                br = new BufferedReader(new FileReader("Input3.txt"));
+                in = new Scanner(new File("Input3.txt"));
+                String input = in.nextLine();
+                if(input.equals("Double")){
+                    ArrayList <Double> outputDoubleFile = new ArrayList <Double>();
+
+                    while(in.hasNextDouble()){
+                        outputDoubleFile.add(in.nextDouble());
+                    }
+
+                    Collections.sort(outputDoubleFile);
+                    PrintWriter doublePrinter = new PrintWriter("outputDouble.txt", "UTF-8");
+                    for(int i = 0; i < outputDoubleFile.size(); i++){
+                        doublePrinter.println(outputDoubleFile.get(i));
+                    }
+                    doublePrinter.close();
+                }
+            }
+
+        } catch (IOException io_exception) {
+            System.out.println("Sorry, couldn't find the file!");
+        }
+    }
+
+}
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabEight[00m$ exit
+exit
+
+Script done on 2020-07-24 14:41:49-04:00 [COMMAND_EXIT_CODE="0"]

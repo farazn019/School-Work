@@ -1,0 +1,3 @@
+The first person in the people array is: Alex English
+The last person in the people array is: Tristan Thompson
+The sorted names in the array are: Alex English, Bill Russel, Charles Barkley, David Robinson, David Thompson, Derryl Dawkins, Hakeem Olajuwon, Jerry West, Pete Maravich, Tristan Thompson, 

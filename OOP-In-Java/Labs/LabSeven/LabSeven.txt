@@ -1,0 +1,336 @@
+Script started on 2020-07-15 15:06:24-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat Persno[K[K[Kson.java
+class Person{
+    private String name;
+    private int age;
+    private String gender;
+
+    void setName(String name){ this.name = name;}
+    void setAge(int age){ this.age = age;}
+    void setGender(String gender){ this.gender = gender;}
+
+    String getName(){ return(this.name);}
+    int getAge(){ return(this.age);}
+    String getGender(){ return(this.gender);}
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat Employee.java
+
+class Employee extends Person{
+    private double salary;
+    private String hiringDate;
+
+    void setSalary(double salary){ this.salary = salary;}
+    void setHiringDate(String hiringDate){ this.hiringDate = hiringDate;}
+
+    double getSalary(){ return(this.salary);}
+    String getHiringDate() { return (this.hiringDate);}
+
+    String getName(){ return(super.getName());}
+
+    public String toString(){
+        return("Salary: " + String.valueOf(this.getSalary()) + "\nHiring Date: " + this.getHiringDate());
+    }
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat Manager.java
+
+
+public class Manager extends Employee{
+
+    private double salary = super.getSalary(), bonusSalary;
+
+    void setBonusSalary(double bonusSalary){ this.bonusSalary = bonusSalary;}
+    void setSalary(double salary){ this.salary = salary;}
+
+    double getSalary(){ return(this.salary);}
+    double getWeeklyBonus(){ return(this.bonusSalary);}
+    double getTotalSalary(){ return(this.salary + this.bonusSalary);}
+
+    public String toString(){
+        return("Name: " + super.getName() + "\nSalary: $" + String.valueOf(this.getSalary()) + "/year\nWeekly Bonus: $" + String.valueOf(this.getWeeklyBonus()));
+    }
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat Student.java
+
+
+class Student extends Person{
+    private String programName;
+    private String level;
+    private int programYear;
+
+    void setProgramName(String programName){ this.programName = programName;}
+    void setLevel(String level){ this.level = level;}
+    void setProgramYear(int programYear){ this.programYear = programYear;}
+    
+    String getProgramName(){ return(this.programName);}
+    String getLevel(){ return(this.level);}
+    int getProgramYear(){ return(this.programYear);}
+
+
+
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat activityOne.java
+
+
+class activityOne{
+
+    public static void main(String[] args){
+        Manager manager = new Manager();
+        manager.setName("John Smith");
+        manager.setSalary(120000);
+        manager.setBonusSalary(200);
+        System.out.println(manager);
+    }
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ javac activityOne.java
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ java activityOne
+Name: John Smith
+Salary: $120000.0/year
+Weekly Bonus: $200.0
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ javac Shape[K[K[K[K[K[K[K[K[K[K[Kcat Shape.java
+import java.util.ArrayList;
+public abstract class Shape implements Comparable<Shape>{
+
+    private String name;
+
+    public Shape(){
+        this.name = "General Shape";
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public abstract double area();
+
+    @Override
+    public int compareTo(Shape o) {
+        if (this.area() < o.area()) {
+            System.out.printf("%s has a greater area than %s.\n", o.getName(), this.getName());
+            return -1;
+        }
+        if (this.area() > o.area()) {
+            System.out.printf("%s has a greater area than %s.\n", this.getName(), o.getName());
+            return 1;
+        }
+        return 0;
+    }
+
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat Square.java
+public class Square extends Shape {
+
+    private double side;
+
+    public Square(double side){
+        this.setName("Square");
+        this.side = side;
+    }
+
+    public double getSide() {
+        return side;
+    }
+
+    @Override
+    public double area() {
+        return this.side * this.side;
+    }
+
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat Triangle.java
+public class Triangle extends Shape {
+
+    private double base;
+    private double height;
+
+    public Triangle(double base, double height){
+        this.setName("Triangle");
+        this.base = base;
+        this.height = height;
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    @Override
+    public double area() {
+        return (this.base * this.height) / 2;
+    }
+
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat Circle.java
+public class Circle extends Shape {
+
+    private double radius;
+
+    public Circle(double radius){
+        this.setName("Circle");
+        this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    @Override
+    public double area() {
+        return Math.PI * this.radius * this.radius;
+    }
+
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat Oval.java
+
+
+public class Oval extends Shape{
+    private double majorRadius, minorRadius;
+    private double area;
+    Oval(double majorRadius, double minorRadius){
+        this.setName("Oval");
+        this.majorRadius = majorRadius;
+        this.minorRadius = minorRadius;
+    }
+
+    public double area(){
+        this.area = this.majorRadius*this.minorRadius*Math.PI;
+        return(this.area);
+    }
+
+    double getArea(){ return(this.area);}
+
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ java[K[K[K[Kcat activityTwo.java
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Random;
+import java.io.PrintStream;
+class activityTwo{
+
+    public static void main(String[] args) {
+        ArrayList <Shape> shapes = new ArrayList<Shape>();
+        Scanner in = new Scanner(System.in);
+        Random random_number = new Random();
+        String userInput = in.nextLine();
+        Shape shape;
+        while (!userInput.equals("E")) {
+            if (userInput.equals("T")) {
+                shape = new Triangle(random_number.nextDouble() * 10, random_number.nextDouble() * 10);
+                shapes.add(shape);
+            }
+            else if (userInput.equals("Q")) {
+                shape = new Square(random_number.nextDouble() * 10);
+                shapes.add(shape);
+            }
+            else if(userInput.equals("C")){
+                shape = new Circle(random_number.nextDouble() * 10);
+                shapes.add(shape);
+            }
+            else if (userInput.equals("O")) {
+                shape = new Oval(random_number.nextDouble() * 10, random_number.nextDouble() * 10);
+                shapes.add(shape);
+            }
+            userInput = in.nextLine();
+        }
+        for (int i = 0; i < shapes.size(); i++) {
+            System.out.printf("Shape Type: %s \nArea: %.2f\n", shapes.get(i).getName(), shapes.get(i).area());
+        }
+    }
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ javac activityTwo.jaa[Kva
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ java activityTwo
+T
+Q
+C
+O
+O
+Q
+T
+C
+E
+Shape Type: Triangle 
+Area: 17.81
+Shape Type: Square 
+Area: 0.62
+Shape Type: Circle 
+Area: 76.24
+Shape Type: Oval 
+Area: 29.67
+Shape Type: Oval 
+Area: 7.21
+Shape Type: Square 
+Area: 3.73
+Shape Type: Triangle 
+Area: 28.90
+Shape Type: Circle 
+Area: 2.85
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ clear
+[H[2J[3J]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat Payable.java
+interface Payable{
+    private double paymentAmount;
+
+    void setPaymentAmount(double paymentAmount);
+    double getPaymentAmount();
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat Employee1.java
+
+class Employee1 implements Payable{
+    private double workingHours;
+    private double hourlyRate;
+    private double paymentAmount;
+
+    void setWorkingHours(double workingHours){this.workingHours = workingHours;}
+    void setHourlyRate(double hourlyRate){this.hourlyRate = hourlyRate;}
+    void setPaymentAmount(double workingHours, double hourlyRate){ this.paymentAmount = workingHours*hourlyRate;}
+
+    double getWorkingHours(){return(this.workingHours);}
+    double getHourlyRate(){return(this.hourlyRate);}
+    double getPaymentAmount(){return(this.paymentAmount);}
+
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat Invoice.java
+
+class Invoice implements Payable{
+    private int numberOfProduct;
+    private double unitPrice;
+    private double totalAmount;
+
+    void setNumberOfProduct(int numberOfProduct){ this.numberOfProduct = numberOfProduct;}
+    void setUnitprice(double unitPrice){ this.unitPrice = unitPrice;}
+    void setTotalAmount(int numberOfProduct, double unitPrice){ this.totalAmount = numberOfProduct*unitPrice;}
+
+    int getNumberOfProduct(){ return(this.numberOfProduct);}
+    double getUnitPrice(){ return(this.unitPrice);}
+    double getTotalAmount(){ return(this.totalAmount);}
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ c[Kclear
+[H[2J[3J]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ cat Shape.jaa[Kva
+import java.util.ArrayList;
+public abstract class Shape implements Comparable<Shape>{
+
+    private String name;
+
+    public Shape(){
+        this.name = "General Shape";
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public abstract double area();
+
+    @Override
+    public int compareTo(Shape o) {
+        if (this.area() < o.area()) {
+            System.out.printf("%s has a greater area than %s.\n", o.getName(), this.getName());
+            return -1;
+        }
+        if (this.area() > o.area()) {
+            System.out.printf("%s has a greater area than %s.\n", this.getName(), o.getName());
+            return 1;
+        }
+        return 0;
+    }
+
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ clear
+[H[2J[3J]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabSeven[00m$ exit
+exit
+
+Script done on 2020-07-15 15:11:20-04:00 [COMMAND_EXIT_CODE="0"]

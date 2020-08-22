@@ -1,0 +1,45 @@
+@startuml
+class AddProduct{
+- xCoordinate: int
+- yCoordinate: int
++ addProduct(String, double)
++ printProduct(String, double)
++ removeProduct(String, int)
+}
+@enduml
+
+@startuml
+class baseTemplate{
+- {private} companyName: String
+- xValue: int
+- yValue: int
+- specificProduct: ArrayList<String>
+- amountOfSpecificProduct: ArrayList <int>
+- totalSum: double
+- frame: JFrame
++ addWindow(int, int)
++ setCompanyName(String)
++ setTotalSum(double)
++ getTotalSum(double)
++ totalNumberOfSpecificProduct(String, int)
+}
+@enduml
+
+
+@startuml
+class totalSum{
+- numberOfItemsBought: int
+- grandTotal: double
++ printGrandTotal(int, double)
++ setNumberOfItemsBought(int)
+}
+@enduml
+
+@startuml
+participant "addProduct" as AP
+participant "baseTemplate" as BT
+participant "totalSum" as TS
+AP -> BT : printProduct(String, double)
+AP -> TS : addProduct(String, double)
+TS -> BT : printGrandTotal(int, double)
+@enduml

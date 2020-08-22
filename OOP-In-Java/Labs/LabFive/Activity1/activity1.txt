@@ -1,0 +1,162 @@
+Script started on 2020-07-06 17:02:45-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity1[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity1[00m$ car[Kt a[KRobot.java
+
+import java.awt.Point;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Robot {
+    private int direction;
+    private double get_x;
+    private double get_y;
+    private int getX;
+    private int getY;
+    Point point_one = new Point(5, 5);
+    String current_direction;
+    String string_get_x;
+    String string_get_y;
+    ArrayList<String> coordinates = new ArrayList<String>();
+
+    Robot(Point var1, int var2) {
+        this.direction = var2;
+        this.point_one.setLocation(var1.getX(), var1.getY());
+        this.get_x = var1.getX();
+        this.get_y = var1.getY();
+        this.getX = (int)this.get_x;
+        this.getY = (int)this.get_y;
+        this.string_get_x = String.valueOf(this.getX);
+        this.string_get_y = String.valueOf(this.getY);
+        String var10001 = this.string_get_x;
+        this.coordinates.add("(" + var10001 + "," + this.string_get_y + ")," + this.getDirection());
+    }
+
+    public void turnRight() {
+        if (this.direction == 4) {
+            this.direction = 1;
+        } else {
+            ++this.direction;
+        }
+
+        String var10001 = this.string_get_x;
+        this.coordinates.add("(" + var10001 + "," + this.string_get_y + ")," + this.getDirection());
+    }
+
+    public void turnLeft() {
+        if (this.direction == 1) {
+            this.direction = 4;
+        } else {
+            --this.direction;
+        }
+
+        String var10001 = this.string_get_x;
+        this.coordinates.add("(" + var10001 + "," + this.string_get_y + ")," + this.getDirection());
+    }
+
+    public void Move() {
+        this.getX = (int)this.get_x;
+        this.getY = (int)this.get_y;
+        if (this.direction == 1) {
+            ++this.getX;
+            this.point_one.move(this.getX + 1, this.getY);
+            ++this.get_x;
+        } else if (this.direction == 2) {
+            this.point_one.move(this.getX, this.getY + 1);
+            ++this.getY;
+            ++this.get_y;
+        } else if (this.direction == 3) {
+            this.point_one.move(this.getX - 1, this.getY);
+            --this.getX;
+            --this.get_x;
+        } else if (this.direction == 4) {
+            this.point_one.move(this.getX, this.getY - 1);
+            --this.getY;
+            --this.get_y;
+        }
+
+        this.string_get_x = String.valueOf(this.getX);
+        this.string_get_y = String.valueOf(this.getY);
+        this.coordinates.add("(" + this.string_get_x + "," + this.string_get_y + ")," + this.getDirection());
+    }
+
+    public String getDirection() {
+        if (this.direction == 1) {
+            this.current_direction = "E";
+        } else if (this.direction == 2) {
+            this.current_direction = "S";
+        } else if (this.direction == 3) {
+            this.current_direction = "W";
+        } else if (this.direction == 4) {
+            this.current_direction = "N";
+        }
+
+        return this.current_direction;
+    }
+
+    public Point getLocation() {
+        return this.point_one.getLocation();
+    }
+
+    public void printLocation() {
+
+        for(String coordinate: coordinates){
+            System.out.println(coordinate);
+        }
+    }
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity1[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity1[00m$ cat RobotTester.java
+import java.awt.Point;
+/**
+ A class to test the Robot class.
+ */
+public class RobotTester
+{
+    /**
+     Tests the methods of the Robot class.
+     @param args not used
+     */
+    public static void main(String[] args)
+    {
+// Create a new Robot object with the initial position of (5,5) and
+// initial direction to the East (1).
+        Robot robot = new Robot(new Point(5, 5), 1);
+        robot.Move(); // 6, 5, 1
+        robot.turnRight(); // 6, 5, 2
+        robot.Move(); // 6, 6, 2
+        robot.Move(); // 6, 7, 2
+        robot.turnRight(); // 6, 7, 3
+        robot.Move(); // 5, 7, 3
+        robot.Move(); // 4, 7, 3
+        robot.turnLeft(); // 4, 7, 2
+        robot.Move(); // 4, 8, 2
+        Point location = robot.getLocation();
+
+        System.out.println("Location: " + location.x + ", " + location.y);
+        System.out.println("Expected: 4, 8");
+        System.out.println("Direction: " + robot.getDirection());
+        System.out.println("Expected: S");
+        robot.printLocation();
+
+
+
+        
+
+    }
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity1[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity1[00m$ javac RobotTester.java
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity1[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity1[00m$ java RobotTester
+Location: 4, 8
+Expected: 4, 8
+Direction: S
+Expected: S
+(5,5),E
+(6,5),E
+(6,5),S
+(6,6),S
+(6,7),S
+(6,7),W
+(5,7),W
+(4,7),W
+(4,7),S
+(4,8),S
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity1[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity1[00m$ exit
+exit
+
+Script done on 2020-07-06 17:03:25-04:00 [COMMAND_EXIT_CODE="0"]

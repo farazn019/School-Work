@@ -1,0 +1,70 @@
+Script started on 2020-07-06 16:49:31-04:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="80" LINES="24"]
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[00m$ cat fibonacci.java
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+
+class fibonacci{
+    private ArrayList<Integer> primeNumbers = new ArrayList<Integer>();
+    int f_0 = 0;
+    int f_1 = 1;
+    int sequence_size; //This integer variable will hold the corresponding number in the sequence.
+
+    void computeSequence(){
+        Scanner input = new Scanner(System.in);
+        sequence_size = input.nextInt();
+        input.close();
+        primeNumbers.add(f_0);
+        primeNumbers.add(f_1);
+
+        for(int i = 0; i < sequence_size - 2; i++){
+            if(f_0 <= f_1){
+                f_0 = f_0 + f_1;
+                primeNumbers.add(f_0);
+            }
+            else if(f_1 < f_0){
+                f_1 = f_1 + f_0;
+                primeNumbers.add(f_1);
+            }
+        }
+    }
+
+    void printNumbers(){
+        System.out.println("The first, " + primeNumbers.size() + " terms of the fibonacci sequence are: ");
+        for(int j = 0; j < primeNumbers.size(); j++){
+            System.out.println(primeNumbers.get(j));
+        }
+    }
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[00m$ clear
+[H[2J[3J]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[00m$ jav[K[K[Kcat testerFibonacci.java
+cat: testerFibonacci.java: No such file or directory
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[00m$ clear
+[H[2J[3J]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[00m$ cat testerfibonacci.java
+public class testerfibonacci {
+    public static void main(String[] args){
+        fibonacci sequence = new fibonacci();
+        sequence.computeSequence();
+        sequence.printNumbers();
+
+    }
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[00m$ javac testerfibonacci.java
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[00m$ ls -a
+[0m[01;34m.[0m              fibonacci.class  primeNumber.class      testerPrimeNumber.class
+[01;34m..[0m             fibonacci.java   testerfibonacci.class
+activity2.txt  LabFive.iml      testerfibonacci.java
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[00m$ clear
+[H[2J[3J]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[00m$ java testerfibonacci
+7
+The first, 7 terms of the fibonacci sequence are: 
+0
+1
+1
+2
+3
+5
+8
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity2[00m$ exit
+exit
+
+Script done on 2020-07-06 16:51:02-04:00 [COMMAND_EXIT_CODE="0"]

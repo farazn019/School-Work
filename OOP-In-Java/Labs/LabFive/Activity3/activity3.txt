@@ -1,0 +1,105 @@
+Script started on 2020-07-06 17:07:49-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity3[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity3[00m$ java[K[K[K[Kcat Person.java
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Person {
+    private String name;
+    private String friendNames = "";
+    String newName;
+    private int numberOfFriends = 0;
+    private int numberOfSpaces = 0;
+
+    Scanner in = new Scanner(System.in);
+
+    ArrayList <String> friends = new ArrayList<String>();
+
+    Person(String var1) {
+        this.name = var1;
+    }
+
+    void beFriend(Person var1) {
+        friends.add(var1.name);
+        ++this.numberOfSpaces;
+    }
+
+    int getFriendsCount() {
+        this.numberOfFriends = this.numberOfSpaces;
+        return this.numberOfFriends;
+    }
+
+    void unFriend(Person var1) {
+        boolean var2 = this.friendNames.contains(var1.name);
+        if (var2) {
+            var1.name = var1.name + " ";
+            this.friendNames.replaceFirst(var1.name, "");
+            --this.numberOfFriends;
+        }
+
+    }
+
+    void getFriendsNamesAtIndex(int printingIndex) {
+        System.out.println(friends.get(printingIndex));
+    }
+
+    void setNewName(int index){
+        if(index > this.getFriendsCount()){
+            System.out.println("The number that you have entered is outside of the range of the maximum number of friends that you have.");
+        }
+        else{
+            System.out.println("Please enter the name of your new friend: ");
+            newName = in.nextLine();
+            friends.set(index, newName);
+        }
+
+    }
+
+    String getName() {
+        return this.name;
+    }
+
+    void printAllNames(){
+        System.out.println("A list of all your friends names are: ");
+        for(String friend:friends){
+            System.out.println(friend);
+        }
+    }
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity3[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity3[00m$ car [K[Kt testPerson.java
+class testPerson{
+    public static void main(String[] args){
+        Person p_1 = new Person("Faraz");
+        Person p_2 = new Person("Chris");
+        Person p_3 = new Person("Thomas");
+        Person p_4 = new Person("Edward");
+
+        p_1.beFriend(p_2);
+        p_1.beFriend(p_3);
+        p_1.beFriend(p_4);
+
+        System.out.println("Hello, my name is, " + p_1.getName());
+        System.out.println("The number of friends that, " + p_1.getName() + " has are, " + p_1.getFriendsCount());
+
+        p_1.getFriendsNamesAtIndex(1);
+        p_1.printAllNames();
+        p_1.setNewName(2);
+        p_1.printAllNames();
+    }
+}]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity3[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity3[00m$ javac testPerson.java
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity3[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity3[00m$ java testPerson
+Hello, my name is, Faraz
+The number of friends that, Faraz has are, 3
+Thomas
+A list of all your friends names are: 
+Chris
+Thomas
+Edward
+Please enter the name of your new friend: 
+Anthony Arthur      McMy ullin
+A list of all your friends names are: 
+Chris
+Thomas
+Anthony McMullin
+]0;faraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx: ~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity3[01;32mfaraznaseem@faraznaseem-OMEN-Laptop-15-ek0xxx[00m:[01;34m~/School-Work/School-Work/OOP-In-Java/Labs/LabFive/Activity3[00m$ exit
+exit
+
+Script done on 2020-07-06 17:08:30-04:00 [COMMAND_EXIT_CODE="0"]

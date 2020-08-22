@@ -1,0 +1,35 @@
+﻿s
+Merge Sort:
+Best Case-> O(N(logN))
+Worst Case -> O(N(logN))
+
+Quick Sort:
+Best Case -> O(N(logN))
+Worst Case -> O(N ^ 2) == O( N squared)
+
+Selection Sort: 
+Best Case -> O(N ^ 2) == O( N squared)
+Worst Case -> O(N ^ 2) == O (N squared)
+
+Bubble Sort:
+Best Case -> O(N)
+Worst Case -> O (N ^ 2) == O (N squared)
+
+
+Insertion Sort: 
+Best Case -> O(N)
+Worst Case -> O(N ^ 2) == O (N squared)
+
+By analyzing the differences between these sorting algorithms, it is quite evident that with larger data sizes, it is beneficial to use either Merge Sort, or Quick Sort, if the data structure is not sorted what-so-ever (worst case),  or if the data structure is partially sorted (Average Case, which is O(N(logN)) for both the sorting algorithms).
+
+On the other hand, if the data structure’s data size is relatively small, then we can use: Bubble Sort, Insertion Sort, or Selection Sort to check the array, because these sorting algorithms are simpler compared to Merge-Sort and Quick-Sort. The time it will take to implement Merge-Sort and Quick-Sort, will be longer than if we just used Selection Sort, 
+Bubble Sort, or Insertion Sort, for the sorting algorithms.
+
+In addition, if we are sure that the data structure is sorted, but we want to check just to verify, then we can use either Bubble Sort or Insertion Sort, as our sorting algorithms, because they have a complexity of O(N), in their best case (data is completely sorted).
+
+On the other hand, if we have to choose between Merge-Sort and Quick-Sort, and the data values are completely unsorted, then it is preferable to go with Merge-Sort, because this sorting algorithm has a time complexity of O(N(logN)), in it’s worst case, compared to Quick Sort’s time complexity of O(N ^ 2), in it’s worst case. It should also be mentioned that in the average case, both these sorting algorithms have a time complexity of O(N(logN)).
+
+
+
+
+
