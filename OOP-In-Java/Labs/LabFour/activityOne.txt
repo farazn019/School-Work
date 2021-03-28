@@ -1,32 +1,0 @@
-Script started on 2020-06-19 14:55:44-0400
-]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabFour[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabFour[00m$ clear
-[3J[H[2J]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabFour[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabFour[00m$ cat activityOne.java
-import java.util.Scanner;
-
-class activityOne {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter first floating point number: ");
-        double varOne = scanner.nextDouble();
-        System.out.println("Enter the second floating point number: ");
-        double varTwo = scanner.nextDouble();
-        System.out.println("Enter the third floating point number: ");
-        double varThree = scanner.nextDouble();
-
-        double total = varOne + varTwo + varThree;
-        System.out.println("The total is, " + total + '.');
-    }
-}]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabFour[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabFour[00m$ javac activityOne.java
-]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabFour[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabFour[00m$ java activityOne
-Enter first floating point number: 
-2.5
-Enter the second floating point number: 
-3.5
-Enter the third floating point number: 
-4.6
-The total is, 10.6.
-]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabFour[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabFour[00m$ exit
-exit
-
-Script done on 2020-06-19 14:56:15-0400

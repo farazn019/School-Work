@@ -1,66 +1,0 @@
-Script started on 2020-06-19 14:59:17-0400
-]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabFour[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabFour[00m$ clear
-[3J[H[2J]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabFour[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabFour[00m$ cat Person.java
-class Person {
-    private String name;
-    private String friendNames = "";
-    private int numberOfFriends = 0;
-    private int numberOfSpaces = 0;
-
-    Person(String var1) {
-        this.name = var1;
-    }
-
-    void beFriend(Person var1) {
-        this.friendNames = this.friendNames + var1.name;
-        this.friendNames = this.friendNames + " ";
-        ++this.numberOfSpaces;
-    }
-
-    int getFriendsCount() {
-        this.numberOfFriends = this.numberOfSpaces;
-        return this.numberOfFriends;
-    }
-
-    void unFriend(Person var1) {
-        boolean var2 = this.friendNames.contains(var1.name);
-        if (var2) {
-            var1.name = var1.name + " ";
-            this.friendNames.replaceFirst(var1.name, "");
-            --this.numberOfFriends;
-        }
-
-    }
-
-    void getFriendsName() {
-        System.out.println(this.friendNames);
-    }
-
-    String getName() {
-        return this.name;
-    }
-}]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabFour[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabFour[00m$ car[Kt testPr[Ker2[Kson.java
-
-class testPerson{
-    public static void main(String[] args){
-        Person p_1 = new Person("Faraz");
-        Person p_2 = new Person("Chris");
-        Person p_3 = new Person("Thomas");
-        Person p_4 = new Person("Edward");
-        p_1.beFriend(p_2);
-        p_1.beFriend(p_3);
-        p_1.beFriend(p_4);
-        System.out.println("Hello, my name is, " + p_1.getName());
-        System.out.println("The number of friends that, " + p_1.getName() + " has are, " + p_1.getFriendsCount());
-        p_1.getFriendsName();
-    }
-}]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabFour[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabFour[00m$ clear
-[3J[H[2J]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabFour[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabFour[00m$ javac testPerson.java
-]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabFour[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabFour[00m$ java testPerson
-Hello, my name is, Faraz
-The number of friends that, Faraz has are, 3
-Chris Thomas Edward 
-]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabFour[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabFour[00m$ cle[K[K[Kexit
-exit
-
-Script done on 2020-06-19 14:59:48-0400

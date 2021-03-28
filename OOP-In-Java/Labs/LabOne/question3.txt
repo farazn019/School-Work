@@ -1,20 +1,0 @@
-Script started on 2020-05-27 16:56:22-0400
-]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabOne[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabOne[00m$ cat LabOne-Question3.txt
-In the Java API Documentation, I found the method inside the Rectangle class, that can 
-set the x,y-coordinates of the rectangle, as well as, set the width and height of the 
-rectangle aswell. The Rectangle class was a part of the jawa.awt package.
-The name of the method was, "setBounds". This method was of type void (so it didn't
-return anything, and it was public aswell). It took for parameters which were of type
-integer. The four parameters were: int x, int y, int width, int height.
-All in all, the method was written as:
-public void setBounds(int x, int y, int width, int height).
-
-For the setBounds method each of the parameters do the following:
-int x -> sets the x-coordinate of the upper-left corner of the rectangle
-int y -> sets the y-coordinate of the upper-left corner of the rectangle.
-int width -> the width of the rectangle
-int height -> the height of the rectangle
-]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabOne[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabOne[00m$ exit
-exit
-
-Script done on 2020-05-27 16:56:33-0400

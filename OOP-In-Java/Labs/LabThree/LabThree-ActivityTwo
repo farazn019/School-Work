@@ -1,5 +1,0 @@
-The output of the string named "s" will be, HELLO.
-The output of the string named "t" will be, Hello.
-What we learn from this is that, the second string,
-"t" points to the location of the original value of "s",
-thus outputting "Hello" instead of "HELLO".

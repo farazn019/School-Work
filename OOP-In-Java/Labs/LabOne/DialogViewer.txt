@@ -1,22 +1,0 @@
-Script started on 2020-05-27 16:58:54-0400
-]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabOne[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabOne[00m$ cat DialogViewer.java
-//Created By Faraz Naseem.....LabeOne.....May27,2020
-
-//Necessary package and API import.
-import javax.swing.JOptionPane;
-
-//The dialog viewer class
-class DialogViewer {
-
-    public static void main(String[] var0) {
-        String var1 = JOptionPane.showInputDialog("What is your name?");
-        System.out.println("Hello" + var1);
-    }
-}
-]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabOne[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabOne[00m$ javac DialogViewer.java
-]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabOne[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabOne[00m$ java DialogViewer
-HelloFaraz Naseem
-]0;faraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR: ~/School-Work/OOP-In-Java/Labs/LabOne[01;32mfaraz-naseem@faraznaseem-Lenovo-ideapad-310-15ABR[00m:[01;34m~/School-Work/OOP-In-Java/Labs//LabOne[00m$ exit
-exit
-
-Script done on 2020-05-27 16:59:29-0400
